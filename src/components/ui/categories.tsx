@@ -8,7 +8,7 @@ export default function Categories() {
     <div className="p-8">
       <h2 className="text-5xl my-4 font-semibold text-gray-600">Categories</h2>
       <div className="grid grid-cols-3 gap-2">
-        {/* <div>{IMAGES.map(({description}) => (
+        {/* <div>{IMAGES.map(({photos}) => <div>images</div>
 
         ))}</div> */}
 
