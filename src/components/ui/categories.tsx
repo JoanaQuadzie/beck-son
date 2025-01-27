@@ -8,17 +8,19 @@ export default function Categories() {
     <div className="p-8">
       <h2 className="text-5xl my-4 font-semibold text-gray-600">Categories</h2>
       <div className="grid grid-cols-3 gap-2">
-        {/* <div>{IMAGES.map(({photos}) => <div>images</div>
+        <div>
+          {IMAGES.map((photo) => (
+            <Image
+              src={photo}
+              alt="kaftan"
+              layout="responsive"
+              width={5}
+              height={5}
+            />
+          ))}
+        </div>
 
-        ))}</div> */}
-
-        {/* <Image
-          src="/images/bck10.jpg"
-          alt="kaftan"
-          layout="responsive"
-          width={5}
-          height={5}
-        />
+        {/* 
         <Image
           src="/images/bck7.jpg"
           alt="kaftan"
