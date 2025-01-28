@@ -4,9 +4,14 @@ import Image from "next/image";
 export default function Partners() {
   return (
     <div className="pb-10">
-      <h2 className="text-6xl mt-16 mb-4 text-center font-semibold text-gray-600">
+      <h2 className="text-4xl mt-16 mb-4 text-center uppercase text-gray-600">
         Our Partners
       </h2>
+      <p className="text-center italic w-2/4 ml-96">
+        Collaborating with industry leaders to drive innovation and deliver
+        exceptional value. Building trusted relationships that empower growth
+        and shared success worldwide.
+      </p>
       <div className="grid grid-cols-3 w-2/3 items-center ml-60">
         <Image
           src="/images/bck24.jpg"

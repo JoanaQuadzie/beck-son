@@ -9,9 +9,7 @@ import {
 export default function Faq() {
   return (
     <div className=" bg-slate-50 pb-16">
-      <h2 className="text-5xl my-4 font-semibold text-gray-600 text-center p-8">
-        FAQs
-      </h2>
+      <h2 className="text-4xl my-4 text-gray-600 text-center p-8">FAQs</h2>
       <div className="w-2/4 ml-96">
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">

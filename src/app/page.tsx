@@ -5,16 +5,18 @@ import Categories from "@/components/ui/categories";
 import About from "@/components/ui/about";
 import Faq from "@/components/ui/faq";
 import Partners from "@/components/ui/partners";
+import Customers from "@/components/ui/customers";
 
 export default function Home() {
   return (
     <div>
       <Header />
       <Hero />
-      <Categories />
       <About />
-      <Partners />
+      <Categories />
       <Faq />
+      <Partners />
+      <Customers />
       <Footer />
     </div>
   );
