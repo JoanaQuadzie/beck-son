@@ -23,24 +23,8 @@ const NAVLINKSANNEX = [
 export default function Header() {
   return (
     <div>
-      <header className="border-b border-b-primary px-6 py-5 bg-yellow-400 text-black font-semibold text-lg">
-        <p className="text-center text-base">
-          Our collection of best shirts combines quality and style at an
-          affordable prices.
-        </p>
-      </header>
-
-      <header className="px-4 h-28 bg-black text-white relative">
-        <div className="flex w-12 ">
-          <Image
-            src="/images/bcksnlogo.jpg"
-            alt="Logo"
-            layout="responsive"
-            width={4}
-            height={6}
-          />
-        </div>
-        <nav className="flex absolute top-16 w-full justify-between items-center">
+      <header className="px-4 h-20 bg-black text-white relative">
+        <nav className="flex absolute top-11 w-full justify-between items-center">
           <ul className="hidden md:flex gap-5 text-base hover:underline decoration-yellow-400 hover:text-yellow-400 underline-offset-4">
             {" "}
             {NAVLINKS.map(({ title, link }) => (

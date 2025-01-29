@@ -3,13 +3,16 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="bg-slate-100">
+    <div
+      className="h-screen bg-cover bg-center"
+      style={{ backgroundImage: "url('images/bck29.jpg')" }}
+    >
       <div className="">
-        <div className="text-4xl font-semibold pt-32 ml-12 text-gray-600">
+        <div className="text-4xl text-white font-semibold pt-32 ml-12">
           <h2 className="text-5xl">Beckson</h2>
           <h3>Everything PJ And More</h3>
         </div>
-        <p className="flex ml-12 w-2/5 gap-y-4 space-y-5 text-gray-500  tracking-wide">
+        <p className="flex ml-12 w-2/5 gap-y-4 space-y-5 text-white  tracking-wide ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
           veritatis sit, alias rem cumque ducimus, optio earum tempora sequi
           nulla voluptatibus dicta deserunt nisi culpa. Tempore omnis quam dicta

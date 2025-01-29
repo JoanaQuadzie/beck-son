@@ -21,14 +21,16 @@ const ACCESSORIES = [
 export default function Categories() {
   return (
     <div className="">
-      <h2 className="text-4xl mt-12 mb-4 text-gray-600 text-center uppercase">
-        Categories
-      </h2>
-      <p className="text-center  w-2/4 italic mb-14 ml-96">
-        Enhance your professional presence with our curated selection of
-        outfits, designed to help you exude confidence and showcase your best
-        self!
-      </p>
+      <div className="mt-36 my-14">
+        <h2 className="text-4xl mt-12 mb-4 text-gray-600 text-center uppercase">
+          Categories
+        </h2>
+        <p className="text-center  w-2/4 italic mb-14 ml-96">
+          Enhance your professional presence with our curated selection of
+          outfits, designed to help you exude confidence and showcase your best
+          self!
+        </p>
+      </div>
       <div className="flex justify-center">
         <div className="grid grid-cols-4 gap-7 w-11/12 rounded-full ">
           {IMAGES.map((photo) => (
