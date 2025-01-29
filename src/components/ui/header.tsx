@@ -23,7 +23,7 @@ const NAVLINKSANNEX = [
 export default function Header() {
   return (
     <div>
-      <header className="px-4 h-20 bg-black text-white relative">
+      <header className="pl-14 h-20 bg-black text-white relative">
         <nav className="flex absolute top-11 w-full justify-between items-center">
           <ul className="hidden md:flex gap-5 text-base hover:underline decoration-yellow-400 hover:text-yellow-400 underline-offset-4">
             {" "}
@@ -34,7 +34,7 @@ export default function Header() {
             ))}
           </ul>
 
-          <div className="flex items-center">
+          <div className="flex items-center mr-24">
             <ul className="flex gap-5 text-base mr-10 hover:text-yellow-400 hover:underline decoration-yellow-400 underline-offset-4">
               <li>Services</li>
               <li>Ads</li>
@@ -45,7 +45,7 @@ export default function Header() {
       </header>
 
       <header>
-        <nav className="py-3 ml-4">
+        <nav className="py-3 ml-14">
           <ul className="hidden md:flex gap-5 text-base hover:underline underline-offset-8">
             {" "}
             {NAVLINKSANNEX.map(({ title, link }) => (

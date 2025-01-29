@@ -5,10 +5,10 @@ export default function Hero() {
   return (
     <div
       className="h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('images/bck29.jpg')" }}
+      style={{ backgroundImage: "url('images/bck4.jpg')" }}
     >
       <div className="">
-        <div className="text-4xl text-white font-semibold pt-32 ml-12">
+        <div className="text-4xl text-white font-semibold pt-32 ml-12 ">
           <h2 className="text-5xl">Beckson</h2>
           <h3>Everything PJ And More</h3>
         </div>

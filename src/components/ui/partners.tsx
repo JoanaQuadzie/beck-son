@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Partners() {
   return (
     <div className="pb-10">
-      <h2 className="text-4xl mt-16 mb-4 text-center uppercase text-gray-600">
+      <h2 className="text-5xl mt-16 mb-4 text-center font-serif uppercase text-gray-600">
         Our Partners
       </h2>
       <p className="text-center italic w-2/4 ml-96">
