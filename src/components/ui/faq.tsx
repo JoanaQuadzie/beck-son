@@ -8,7 +8,7 @@ import {
 
 export default function Faq() {
   return (
-    <div className=" bg-slate-50 pb-16">
+    <div className=" bg-slate-50 pb-16 mt-16">
       <h2 className="text-5xl my-4 text-gray-600 text-center p-8 font-serif">
         FAQs
       </h2>
@@ -89,21 +89,6 @@ export default function Faq() {
               [list specific materials, e.g., 100% organic cotton, polyester
               blends, etc.]. Detailed fabric information is available on each
               product page.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-
-        <Accordion type="single" collapsible>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>
-              Can I modify or cancel my order after it's been placed?
-            </AccordionTrigger>
-            <AccordionContent>
-              We strive to process orders quickly; therefore, modifications or
-              cancellations may not be possible once an order is placed. If you
-              need to make changes, please contact our customer service team as
-              soon as possible, and we'll do our best to accommodate your
-              request.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

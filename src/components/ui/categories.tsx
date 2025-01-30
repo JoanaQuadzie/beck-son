@@ -28,6 +28,33 @@ const IMAGES = [
   },
 ];
 
+const SUITS = [
+  {
+    link: "/images/suit14.jpg",
+    description: "lorem lore lorem lorem",
+    price: "GHS 950",
+    status: "available",
+  },
+  {
+    link: "/images/suit2.jpg",
+    description: "lorem lore lorem lorem",
+    price: "GHS 800",
+    status: "available",
+  },
+  {
+    link: "/images/suit8.jpg",
+    description: "lorem lore lorem lorem",
+    price: "GHS 900",
+    status: "available",
+  },
+  {
+    link: "/images/suit13.jpg",
+    description: "lorem lore lorem lorem",
+    price: "GHS 950",
+    status: "available",
+  },
+];
+
 const SHIRTS = [
   {
     link: "/images/bck11.jpg",
@@ -123,6 +150,37 @@ export default function Categories() {
           View More
         </button>
       </div>
+
+      <section>
+        <h3 className="text-5xl font-serif capitalize text-gray-500 mt-24 mb-10 ml-14 text-center">
+          Suits
+        </h3>
+        <div className="flex justify-center">
+          <div className="w-11/12 grid grid-cols-4 gap-7 rounded-full">
+            {SUITS.map((suit) => (
+              <div key={suit.link}>
+                <Image
+                  src={suit.link}
+                  alt="sneakers"
+                  layout="responsive"
+                  width={5}
+                  height={5}
+                />
+                <div className="items-center justify-center flex flex-col my-6 italic text-gray-500">
+                  <p>{suit.description}</p>
+                  <p>{suit.price}</p>
+                  <p>{suit.status}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="flex items-center justify-center mt-3 mb-20">
+          <button className="text-white bg-yellow-800 hover:bg-yellow-700 p-3 rounded-3xl px-7">
+            View More
+          </button>
+        </div>
+      </section>
 
       <section>
         <h3 className="text-5xl capitalize text-gray-500 mt-24 mb-10 ml-14 text-center font-serif">
