@@ -32,25 +32,25 @@ const SUITS = [
   {
     link: "/images/suit14.jpg",
     description: "lorem lore lorem lorem",
-    price: "GHS 950",
+    price: "GHS 1200",
     status: "available",
   },
   {
     link: "/images/suit2.jpg",
     description: "lorem lore lorem lorem",
-    price: "GHS 800",
+    price: "GHS 950",
     status: "available",
   },
   {
     link: "/images/suit8.jpg",
     description: "lorem lore lorem lorem",
-    price: "GHS 900",
+    price: "GHS 800",
     status: "available",
   },
   {
     link: "/images/suit13.jpg",
     description: "lorem lore lorem lorem",
-    price: "GHS 950",
+    price: "GHS 900",
     status: "available",
   },
 ];
@@ -215,7 +215,7 @@ export default function Categories() {
 
       <section>
         <h3 className="text-5xl font-serif capitalize text-gray-500 mt-24 mb-10 ml-14 text-center">
-          Shoes & Sneakers
+          Sneakers & Shoes
         </h3>
         <div className="flex justify-center">
           <div className="w-11/12 grid grid-cols-4 gap-7 rounded-full">

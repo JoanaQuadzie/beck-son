@@ -8,8 +8,7 @@ export default function Hero() {
       style={{ backgroundImage: "url('images/bck4.jpg')" }}
     >
       <div className="">
-        <div className="text-4xl text-white font-semibold pt-32 ml-12 ">
-          <h2 className="text-5xl">Beckson</h2>
+        <div className="text-4xl text-white font-semibold pt-32 ml-12 mb-3">
           <h3>Everything PJ And More</h3>
         </div>
         <p className="flex ml-12 w-2/5 gap-y-4 space-y-5 text-white  tracking-wide ">
