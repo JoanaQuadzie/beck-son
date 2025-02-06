@@ -7,7 +7,6 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 
 export default function SignUpPage() {
   const [email, setEmail] = useState("");
@@ -16,13 +15,16 @@ export default function SignUpPage() {
   const [signUpError, setSignUpError] = useState<string | null>(null);
   const router = useRouter();
 
-  // useEffect(() => {
-  //   const unsubscribe = onAuthStateChanged(auth, (user) => {
-  //     if (user) {
-  //       // If user is already logged in, redirect to the homepage
-  //       router.push("/");
-  //     }
-  //   });
+  // Redirect user if already signed in
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        router.push("/"); // Redirect to home page if user is logged in
+      }
+    });
+
+    return () => unsubscribe(); // Cleanup function
+  }, [router]);
 
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,13 +38,14 @@ export default function SignUpPage() {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       router.push("/"); // Navigate to the home page
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error signing up:", error);
 
-      if (error instanceof Error) {
-        setSignUpError(error.message); // Now TypeScript knows error has a message
+      if (error.code === "auth/email-already-in-use") {
+        setSignUpError("Email already in use. Redirecting to home...");
+        setTimeout(() => router.push("/"), 2000); // Redirect to login page after 2 seconds
       } else {
-        setSignUpError("An unexpected error occurred."); // Fallback message
+        setSignUpError(error.message || "An unexpected error occurred.");
       }
     }
   };
@@ -67,7 +70,7 @@ export default function SignUpPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="focus:outline-none border rounded-lg h-10 w-96 mb-4 shadow-lg p-3"
-            ></input>
+            />
           </label>
           <label>
             <div className="text-white text-sm ml-2">Password</div>
@@ -76,7 +79,7 @@ export default function SignUpPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="focus:outline-none border rounded-lg h-10 w-96 mb-4 shadow-lg p-3"
-            ></input>
+            />
           </label>
           <label>
             <div className="text-white text-sm ml-2">Confirm Password</div>
@@ -85,9 +88,9 @@ export default function SignUpPage() {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               className="focus:outline-none border rounded-lg h-10 w-96 mb-4 shadow-lg p-3"
-            ></input>
+            />
           </label>
-          {signUpError && <p className="text-red-500">{signUpError}</p>}l
+          {signUpError && <p className="text-red-500">{signUpError}</p>}
           <button
             type="submit"
             className="bg-red-700 text-white rounded-lg px-6 py-1 hover:bg-yellow-600"
