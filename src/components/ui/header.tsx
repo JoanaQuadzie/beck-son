@@ -1,7 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { FaSearch } from "react-icons/fa";
-import Image from "next/image";
 
 const NAVLINKS = [
   { title: "Home", link: "/" },
@@ -25,7 +23,7 @@ export default function Header() {
     <div>
       <header className="pl-14 h-20 bg-black text-white relative">
         <nav className="flex absolute top-11 w-full justify-between items-center">
-          <ul className="hidden md:flex gap-5 text-base hover:underline decoration-yellow-400 hover:text-yellow-400 underline-offset-4">
+          <ul className="hidden md:flex gap-5 text-base">
             {" "}
             {NAVLINKS.map(({ title, link }) => (
               <li key={link}>
@@ -35,7 +33,7 @@ export default function Header() {
           </ul>
 
           <div className="flex items-center mr-24">
-            <ul className="flex gap-5 text-base mr-10 hover:text-yellow-400 hover:underline decoration-yellow-400 underline-offset-4">
+            <ul className="flex gap-5 text-base mr-10">
               <li>Services</li>
               <li>Ads</li>
               <li>Visit Us</li>
@@ -45,8 +43,8 @@ export default function Header() {
       </header>
 
       <header>
-        <nav className="py-3 ml-14">
-          <ul className="hidden md:flex gap-5 text-base hover:underline underline-offset-8">
+        <nav className="flex py-3 ml-14">
+          <ul className="hidden md:flex gap-5 text-base ">
             {" "}
             {NAVLINKSANNEX.map(({ title, link }) => (
               <li key={link}>
@@ -54,6 +52,12 @@ export default function Header() {
               </li>
             ))}
           </ul>
+
+          <div className="ml-96">
+            <Link href="/login">
+              <h2 className="text-base font-semibold">Logout</h2>
+            </Link>
+          </div>
         </nav>
       </header>
     </div>

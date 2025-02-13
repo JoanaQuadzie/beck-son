@@ -18,20 +18,10 @@ export default function Hero() {
           similique.
         </p>
         <input
-          placeholder="e.g double breasted suit"
+          placeholder="e.g design shirt"
           className="py-7 px-4 w-1/3 border rounded-xl shadow-xl ml-12 mt-8 mb-14 focus:outline-none"
         ></input>
       </div>
-
-      {/* <div className="w-96">
-        <Image
-          src="/images/bck31annex.jpg"
-          alt="hero image"
-          layout="responsive"
-          width={20}
-          height={10}
-        />
-      </div> */}
     </div>
   );
 }

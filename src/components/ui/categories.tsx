@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const IMAGES = [
   {
@@ -146,9 +147,11 @@ export default function Categories() {
         </div>
       </div>
       <div className="flex items-center justify-center mt-3">
-        <button className="text-white bg-yellow-800 hover:bg-yellow-700 p-3 rounded-3xl px-7">
-          View More
-        </button>
+        <Link href="/kaftan">
+          <button className="text-white bg-yellow-800 hover:bg-yellow-700 p-3 rounded-3xl px-7">
+            View More
+          </button>
+        </Link>
       </div>
 
       <section>
@@ -176,9 +179,11 @@ export default function Categories() {
           </div>
         </div>
         <div className="flex items-center justify-center mt-3 mb-20">
-          <button className="text-white bg-yellow-800 hover:bg-yellow-700 p-3 rounded-3xl px-7">
-            View More
-          </button>
+          <Link href="/suit">
+            <button className="text-white bg-yellow-800 hover:bg-yellow-700 p-3 rounded-3xl px-7">
+              View More
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -207,9 +212,11 @@ export default function Categories() {
           </div>
         </div>
         <div className="flex items-center justify-center mt-3">
-          <button className="text-white bg-yellow-800 hover:bg-yellow-700 p-3 rounded-3xl px-7">
-            View More
-          </button>
+          <Link href="/shirt">
+            <button className="text-white bg-yellow-800 hover:bg-yellow-700 p-3 rounded-3xl px-7">
+              View More
+            </button>
+          </Link>
         </div>
       </section>
 

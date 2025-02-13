@@ -37,13 +37,13 @@ export default function SignUpPage() {
 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      router.push("/"); // Navigate to the home page
+      router.push("/login"); // Navigate to the login page
     } catch (error: any) {
       console.error("Error signing up:", error);
 
       if (error.code === "auth/email-already-in-use") {
-        setSignUpError("Email already in use. Redirecting to home...");
-        setTimeout(() => router.push("/"), 2000); // Redirect to login page after 2 seconds
+        setSignUpError("Email already in use. Redirecting to login...");
+        setTimeout(() => router.push("/login"), 2000); // Redirect to login page after 2 seconds
       } else {
         setSignUpError(error.message || "An unexpected error occurred.");
       }
