@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Search from "./search";
 
 export default function Hero() {
   return (
@@ -17,10 +17,7 @@ export default function Hero() {
           nulla voluptatibus dicta deserunt nisi culpa. Tempore omnis quam dicta
           similique.
         </p>
-        <input
-          placeholder="e.g design shirt"
-          className="py-7 px-4 w-1/3 border rounded-xl shadow-xl ml-12 mt-8 mb-14 focus:outline-none"
-        ></input>
+        <Search />
       </div>
     </div>
   );

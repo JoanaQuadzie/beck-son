@@ -28,7 +28,22 @@ const IMAGES = [
   },
 ];
 
-export default function page() {
+export default async function page(props) {
+  const searchParams = await props.searchParams;
+  const searchKeyword = searchParams.q;
+  let searchedShirts;
+  if (searchKeyword) {
+    searchedShirts = IMAGES.filter((shirt) => {
+      return (
+        shirt.description
+          .toLowerCase()
+          .includes(searchKeyword?.toLowerCase()) ||
+        shirt.status.toLowerCase().includes(searchKeyword?.toLowerCase())
+      );
+    });
+  } else {
+    searchedShirts = IMAGES;
+  }
   return (
     <section>
       <div>
@@ -38,8 +53,9 @@ export default function page() {
       </div>
       <div className="flex justify-center">
         <div className="grid grid-cols-3 gap-12 w-9/12 rounded-full ">
-          {IMAGES.map((photo) => (
-            <div key={photo.link}>
+          {searchedShirts.length === 0 && <p>No shirts found</p>}
+          {searchedShirts.map((photo, index) => (
+            <div key={index}>
               <Image
                 src={photo.link}
                 alt="shirt"

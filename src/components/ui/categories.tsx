@@ -244,11 +244,13 @@ export default function Categories() {
             ))}
           </div>
         </div>
-        <div className="flex items-center justify-center mt-3 mb-20">
-          <button className="text-white bg-yellow-800 hover:bg-yellow-700 p-3 rounded-3xl px-7">
-            View More
-          </button>
-        </div>
+        <Link href="/shoes">
+          <div className="flex items-center justify-center mt-3 mb-20">
+            <button className="text-white bg-yellow-800 hover:bg-yellow-700 p-3 rounded-3xl px-7">
+              View More
+            </button>
+          </div>
+        </Link>
       </section>
     </div>
   );

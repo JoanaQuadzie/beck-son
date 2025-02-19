@@ -1,41 +1,26 @@
+"use client";
 import { useState } from "react";
+import { SearchIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 
-type Item = {
-  id: number;
-  name: string;
-};
-
-type SearchProps = {
-  data: Item[];
-};
-
-const Search = ({ data }: SearchProps) => {
+const Search = () => {
   const [query, setQuery] = useState<string>("");
-
-  const filteredData = data.filter((item) =>
-    item.name.toLowerCase().includes(query.toLowerCase())
-  );
+  const router = useRouter();
 
   return (
-    <div className="p-4">
+    <div className="py-7 flex items-center justify-between px-4 w-1/3 border bg-white rounded-xl shadow-xl ml-12 mt-8 mb-14 ">
       <input
+        className="w-full focus:outline-none"
         type="text"
-        placeholder="Search..."
+        placeholder="e.g design shirt..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="w-full p-2 border rounded-md"
       />
-      <ul className="mt-2">
-        {filteredData.length > 0 ? (
-          filteredData.map((item) => (
-            <li key={item.id} className="p-2 border-b">
-              {item.name}
-            </li>
-          ))
-        ) : (
-          <p>No results found.</p>
-        )}
-      </ul>
+      <SearchIcon
+        onClick={() => {
+          router.push("/shirt?q=" + query);
+        }}
+      />
     </div>
   );
 };
