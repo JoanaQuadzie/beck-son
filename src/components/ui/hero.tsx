@@ -1,13 +1,13 @@
 import React from "react";
-import Search from "./search";
+// import Search from "./search";
 
 export default function Hero() {
   return (
     <div
       className="h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('images/bck4.jpg')" }}
+      style={{ backgroundImage: "url('images/bgg1.jpg')" }}
     >
-      <div className="">
+      <div>
         <div className="text-4xl text-white font-semibold pt-32 ml-12 mb-3">
           <h3>Everything PJ And More</h3>
         </div>
@@ -17,7 +17,7 @@ export default function Hero() {
           nulla voluptatibus dicta deserunt nisi culpa. Tempore omnis quam dicta
           similique.
         </p>
-        <Search />
+        {/* <Search /> */}
       </div>
     </div>
   );
