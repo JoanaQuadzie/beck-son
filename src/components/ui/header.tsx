@@ -56,9 +56,9 @@ export default function Header() {
 
           <div className="flex items-center mr-24">
             <ul className="flex gap-5 text-base mr-10">
-              <li>Services</li>
-              <li>Ads</li>
               <li>Visit Us</li>
+              <li>Ads</li>
+              <li>Cart</li>
             </ul>
           </div>
         </nav>
