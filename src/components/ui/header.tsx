@@ -2,13 +2,14 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { TiShoppingCart } from "react-icons/ti";
 
 const NAVLINKS = [
   { title: "Home", link: "/" },
   { title: "About Us", link: "/about-us" },
   { title: "Shop", link: "/shop" },
   { title: "Flash Sales", link: "/flash sales" },
-  { title: "Best Selling", link: "/best selling" },
+  { title: "Visit Us", link: "/contact" },
 ];
 
 const NAVLINKSANNEX = [
@@ -56,9 +57,9 @@ export default function Header() {
 
           <div className="flex items-center mr-24">
             <ul className="flex gap-5 text-base mr-10">
-              <li>Visit Us</li>
               <li>Ads</li>
               <li>Cart</li>
+              <TiShoppingCart />
             </ul>
           </div>
         </nav>
