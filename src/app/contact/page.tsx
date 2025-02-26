@@ -16,11 +16,12 @@ export default function page() {
       <div className="text-5xl my-4 text-gray-600 text-center p-8 font-serif">
         <h2>CONTACT FORM</h2>
       </div>
-      <article className="grid grid-cols-3">
+      <article className="flex justify-center gap-8">
         <div>
-          <MdAddLocationAlt className="" />
+          <MdAddLocationAlt />
           <p>Address:</p>
-          <p>125 Spintex Rd, Accra, Ghana</p>
+          <p>125 Spintex Rd </p>
+          <p>Accra, Ghana</p>
         </div>
         <div>
           <FaPhoneAlt />
@@ -34,7 +35,7 @@ export default function page() {
         </div>
       </article>
 
-      <section>
+      <section className="flex justify-center">
         <form>
           <label>
             <div>Name</div>
@@ -43,7 +44,7 @@ export default function page() {
               onChange={(event) => {
                 setName(event.target.value);
               }}
-              className="w-2/3 border-2 rounded-full h-14 p-8"
+              className="border-2 rounded-lg h-10 p-6"
               type="text"
             />
           </label>
@@ -54,7 +55,7 @@ export default function page() {
               onChange={(event) => {
                 setEmail(event.target.value);
               }}
-              className="w-2/3 border-2 rounded-full h-14 p-8"
+              className="border-2 rounded-lg h-10 p-6"
               type="text"
             />
           </label>
@@ -65,7 +66,7 @@ export default function page() {
               onChange={(event) => {
                 setSubject(event.target.value);
               }}
-              className="w-2/3 border-2 rounded-full h-14 p-8"
+              className="border-2 rounded-lg h-3 p-8"
               type="text"
             />
           </label>
@@ -76,7 +77,7 @@ export default function page() {
               onChange={(event) => {
                 setMessage(event.target.value);
               }}
-              className="w-2/3 border-2 rounded-full h-14 p-8"
+              className="border-2 rounded-lg h-36 p-8"
               type="text"
             />
           </label>
