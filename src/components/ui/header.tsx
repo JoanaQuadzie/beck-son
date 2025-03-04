@@ -17,7 +17,6 @@ const NAVLINKSANNEX = [
   { title: "African Designs", link: "/african designs" },
   { title: "Corporate", link: "/corporate" },
   { title: "Casuals", link: "/casuals" },
-  { title: "On Sale", link: "/on sale" },
   { title: "More", link: "/more" },
 ];
 
@@ -59,7 +58,7 @@ export default function Header() {
             <ul className="flex gap-5 text-base mr-10">
               <li>Ads</li>
               <li>Cart</li>
-              <TiShoppingCart />
+              <TiShoppingCart size={30} />
             </ul>
           </div>
         </nav>
