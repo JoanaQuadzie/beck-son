@@ -4,8 +4,8 @@ import React from "react";
 export default function Hero() {
   return (
     <div
-      className="h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('images/bgg1.jpg')" }}
+      className="h-screen bg-cover bg-center backdrop:blur-2xl"
+      style={{ backgroundImage: "url('images/bck3.jpg')" }}
     >
       <div>
         <div className="text-4xl text-white font-semibold pt-32 ml-12 mb-3">

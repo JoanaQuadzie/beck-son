@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { TiShoppingCart } from "react-icons/ti";
+import { MdHelpOutline } from "react-icons/md";
 
 const NAVLINKS = [
   { title: "Home", link: "/" },
@@ -56,9 +57,18 @@ export default function Header() {
 
           <div className="flex items-center mr-24">
             <ul className="flex gap-5 text-base mr-10">
-              <li>Ads</li>
-              <li>Cart</li>
-              <TiShoppingCart size={30} />
+              <li>
+                <button className="flex items-center gap-2 hover:text-yellow-400">
+                  <MdHelpOutline size={30} />
+                  Help
+                </button>
+              </li>
+              <li>
+                <button className="flex items-center gap-2 hover:text-yellow-400">
+                  <TiShoppingCart size={30} />
+                  Cart
+                </button>
+              </li>
             </ul>
           </div>
         </nav>
