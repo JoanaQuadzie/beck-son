@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { TiShoppingCart } from "react-icons/ti";
 import { MdHelpOutline } from "react-icons/md";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import Search from "./search";
 
 const NAVLINKS = [
   { title: "Home", link: "/" },
@@ -27,7 +29,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="pl-14 h-24 bg-gray-700 text-white relative">
+      <header className="pl-14 h-24 bg-green-700 text-white relative">
         <nav className="flex absolute top-11 w-full justify-between items-center">
           <ul className="hidden md:flex gap-5 text-base">
             {" "}
@@ -39,7 +41,8 @@ export default function Header() {
           </ul>
 
           <div>
-            <input
+            <Search />
+            {/* <input
               className="bg-white w-96 focus:outline-none border rounded-lg py-1 px-4 "
               placeholder="e.g all stars sneakers"
               type="text"
@@ -52,7 +55,7 @@ export default function Header() {
               value={query}
             >
               search
-            </button>
+            </button> */}
           </div>
 
           <div className="flex items-center mr-24">
@@ -61,6 +64,7 @@ export default function Header() {
                 <button className="flex items-center gap-2 hover:text-yellow-400">
                   <MdHelpOutline size={30} />
                   Help
+                  <RiArrowDropDownLine size={30} />
                 </button>
               </li>
               <li>

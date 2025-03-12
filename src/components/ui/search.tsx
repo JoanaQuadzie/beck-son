@@ -8,7 +8,7 @@ const Search = () => {
   const router = useRouter();
 
   return (
-    <div className="py-7 flex items-center justify-between px-4 w-1/3 border bg-white rounded-xl shadow-xl ml-12 mt-8 mb-14 ">
+    <div className="py-2 flex items-center justify-between px-4 w-96 border bg-white rounded-lg shadow-xl">
       <input
         className="w-full focus:outline-none"
         type="text"

@@ -1,5 +1,5 @@
 import React from "react";
-// import Search from "./search";
+import Search from "./search";
 
 export default function Hero() {
   return (
@@ -17,7 +17,7 @@ export default function Hero() {
           nulla voluptatibus dicta deserunt nisi culpa. Tempore omnis quam dicta
           similique.
         </p>
-        {/* <Search /> */}
+        <Search />
       </div>
     </div>
   );
