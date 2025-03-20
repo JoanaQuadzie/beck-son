@@ -29,7 +29,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="pl-14 h-24 bg-green-700 text-white relative">
+      <header className="pl-14 h-24 bg-yellow-700 text-white relative">
         <nav className="flex absolute top-11 w-full justify-between items-center">
           <ul className="hidden md:flex gap-5 text-base">
             {" "}
@@ -42,20 +42,6 @@ export default function Header() {
 
           <div>
             <Search />
-            {/* <input
-              className="bg-white w-96 focus:outline-none border rounded-lg py-1 px-4 "
-              placeholder="e.g all stars sneakers"
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-            ></input>
-            <button
-              className="bg-gray-100 text-black mx-2 p-2 rounded-lg hover:bg-gray-300 border-none"
-              type="button"
-              value={query}
-            >
-              search
-            </button> */}
           </div>
 
           <div className="flex items-center mr-24">
