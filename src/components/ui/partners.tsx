@@ -16,49 +16,42 @@ export default function Partners() {
         <Image
           src="/images/bck24.jpg"
           alt="hero image"
-          layout="responsive"
           width={20}
           height={10}
         />
         <Image
           src="/images/bck22.jpg"
           alt="hero image"
-          layout="responsive"
           width={20}
           height={10}
         />
         <Image
           src="/images/bck23.jpg"
           alt="hero image"
-          layout="responsive"
           width={20}
           height={10}
         />
         <Image
           src="/images/bck25.jpg"
           alt="hero image"
-          layout="responsive"
           width={20}
           height={10}
         />
         <Image
           src="/images/bck26.jpg"
           alt="hero image"
-          layout="responsive"
           width={20}
           height={10}
         />
         <Image
           src="/images/bck27.jpg"
           alt="hero image"
-          layout="responsive"
           width={20}
           height={10}
         />
         {/* <Image
           src="/images/bck28.jpg"
           alt="hero image"
-          layout="responsive"
           width={20}
           height={10}
         /> */}

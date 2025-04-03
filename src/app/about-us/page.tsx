@@ -31,7 +31,6 @@ export default function About() {
           <Image
             src="/images/bck29.jpg"
             alt="hero image"
-            layout="responsive"
             width={20}
             height={10}
           />

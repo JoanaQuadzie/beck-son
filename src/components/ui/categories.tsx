@@ -130,13 +130,7 @@ export default function Categories() {
         <div className="grid grid-cols-4 gap-7 w-11/12 rounded-full ">
           {IMAGES.map((photo) => (
             <div key={photo.link}>
-              <Image
-                src={photo.link}
-                alt="kaftan"
-                layout="responsive"
-                width={5}
-                height={5}
-              />
+              <Image src={photo.link} alt="kaftan" width={5} height={5} />
               <div className="items-center justify-center flex flex-col my-6 italic text-gray-500">
                 <p>{photo.description}</p>
                 <p>{photo.price}</p>
@@ -162,13 +156,7 @@ export default function Categories() {
           <div className="w-11/12 grid grid-cols-4 gap-7 rounded-full">
             {SUITS.map((suit) => (
               <div key={suit.link}>
-                <Image
-                  src={suit.link}
-                  alt="sneakers"
-                  layout="responsive"
-                  width={5}
-                  height={5}
-                />
+                <Image src={suit.link} alt="sneakers" width={5} height={5} />
                 <div className="items-center justify-center flex flex-col my-6 italic text-gray-500">
                   <p>{suit.description}</p>
                   <p>{suit.price}</p>
@@ -195,13 +183,7 @@ export default function Categories() {
           <div className="grid grid-cols-4 gap-7 w-11/12 rounded-full ">
             {SHIRTS.map((photo) => (
               <div key={photo.link}>
-                <Image
-                  src={photo.link}
-                  alt="kaftan"
-                  layout="responsive"
-                  width={5}
-                  height={5}
-                />
+                <Image src={photo.link} alt="kaftan" width={5} height={5} />
                 <div className="items-center justify-center flex flex-col my-6 italic text-gray-500">
                   <p>{photo.description}</p>
                   <p>{photo.price}</p>
@@ -228,13 +210,7 @@ export default function Categories() {
           <div className="w-11/12 grid grid-cols-4 gap-7 rounded-full">
             {ACCESSORIES.map((shoes) => (
               <div key={shoes.link}>
-                <Image
-                  src={shoes.link}
-                  alt="sneakers"
-                  layout="responsive"
-                  width={5}
-                  height={5}
-                />
+                <Image src={shoes.link} alt="sneakers" width={5} height={5} />
                 <div className="items-center justify-center flex flex-col my-6 italic text-gray-500">
                   <p>{shoes.description}</p>
                   <p>{shoes.price}</p>
