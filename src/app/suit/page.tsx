@@ -45,13 +45,7 @@ export default function page() {
         <div className="grid grid-cols-3 gap-12 w-9/12 rounded-full ">
           {IMAGES.map((photo) => (
             <div key={photo.link}>
-              <Image
-                src={photo.link}
-                alt="suit"
-                layout="responsive"
-                width={2}
-                height={2}
-              />
+              <Image src={photo.link} alt="suit" width={2} height={2} />
               <div className="items-center justify-center flex flex-col my-6 italic text-gray-500">
                 <p>{photo.description}</p>
                 <p>{photo.price}</p>

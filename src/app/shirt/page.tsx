@@ -56,13 +56,7 @@ export default async function page(props) {
           {searchedShirts.length === 0 && <p>No shirts found</p>}
           {searchedShirts.map((photo, index) => (
             <div key={index}>
-              <Image
-                src={photo.link}
-                alt="shirt"
-                layout="responsive"
-                width={2}
-                height={2}
-              />
+              <Image src={photo.link} alt="shirt" width={2} height={2} />
               <div className="items-center justify-center flex flex-col my-6 italic text-gray-500">
                 <p>{photo.description}</p>
                 <p>{photo.price}</p>
