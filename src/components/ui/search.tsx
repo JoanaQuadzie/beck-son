@@ -8,7 +8,7 @@ const Search = () => {
   const router = useRouter();
 
   return (
-    <div className="py-2 flex items-center justify-between px-4 w-96 border bg-white rounded-lg shadow-xl">
+    <div className="py-2 flex items-center justify-between px-4 w-96 border bg-white rounded-lg shadow-xl relative">
       <input
         className="w-full focus:outline-none"
         type="text"
@@ -17,6 +17,7 @@ const Search = () => {
         onChange={(e) => setQuery(e.target.value)}
       />
       <SearchIcon
+        className="cursor-pointer absolute top-2 right-1"
         onClick={() => {
           router.push("/shirt?q=" + query);
         }}
