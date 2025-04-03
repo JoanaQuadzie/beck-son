@@ -31,8 +31,9 @@ export default function About() {
           <Image
             src="/images/bck29.jpg"
             alt="hero image"
-            width={20}
-            height={10}
+            width={200}
+            height={200}
+            className="w-auto h-auto"
           />
         </div>
       </div>

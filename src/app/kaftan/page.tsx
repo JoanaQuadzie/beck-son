@@ -41,10 +41,16 @@ export default function page() {
         <h2 className="text-center text-4xl font-semibold my-12">KAFTANS</h2>
       </div>
       <div className="flex justify-center">
-        <div className="grid grid-cols-3 gap-12 w-9/12 rounded-full ">
-          {IMAGES.map((photo) => (
-            <div key={photo.link}>
-              <Image src={photo.link} alt="kaftan" width={2} height={2} />
+        <div className="grid grid-cols-3 gap-12 w-9/12 rounded-full">
+          {IMAGES.map((photo, i) => (
+            <div key={i} className="flex flex-col items-center">
+              <Image
+                src={photo.link}
+                width={200}
+                height={200}
+                alt="kaftan"
+                className="h-auto w-auto"
+              />
               <div className="items-center justify-center flex flex-col my-6 italic text-gray-500">
                 <p>{photo.description}</p>
                 <p>{photo.price}</p>

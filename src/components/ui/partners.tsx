@@ -16,14 +16,16 @@ export default function Partners() {
         <Image
           src="/images/bck24.jpg"
           alt="hero image"
-          width={20}
-          height={10}
+          width={200}
+          height={200}
+          className="w-auto h-auto"
         />
         <Image
           src="/images/bck22.jpg"
           alt="hero image"
-          width={20}
-          height={10}
+          width={200}
+          height={200}
+          className="w-auto h-auto"
         />
         <Image
           src="/images/bck23.jpg"
@@ -34,26 +36,30 @@ export default function Partners() {
         <Image
           src="/images/bck25.jpg"
           alt="hero image"
-          width={20}
-          height={10}
+          width={200}
+          height={200}
+          className="w-auto h-auto"
         />
         <Image
           src="/images/bck26.jpg"
           alt="hero image"
-          width={20}
-          height={10}
+          width={200}
+          height={200}
+          className="w-auto h-auto"
         />
         <Image
           src="/images/bck27.jpg"
           alt="hero image"
-          width={20}
-          height={10}
+          width={200}
+          height={200}
+          className="w-auto h-auto"
         />
         {/* <Image
           src="/images/bck28.jpg"
           alt="hero image"
-          width={20}
-          height={10}
+           width={200}
+                height={200}
+                className="w-auto h-auto"
         /> */}
       </div>
     </div>
