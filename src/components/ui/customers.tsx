@@ -15,8 +15,14 @@ export default function Customers() {
       </p>
       <div className="flex justify-center">
         <div className="grid grid-cols-3 gap-10">
-          {IMAGES.map((clientphoto) => (
-            <Image src={clientphoto} alt="photos" width={270} height={270} />
+          {IMAGES.map((clientphoto, index) => (
+            <Image
+              key={index}
+              src={clientphoto}
+              alt="photos"
+              width={270}
+              height={270}
+            />
           ))}
         </div>
       </div>
