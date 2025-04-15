@@ -35,7 +35,7 @@ export default function Header() {
             ))}
           </ul>
 
-          <div>
+          <div className="text-gray-700">
             <Search />
           </div>
 

@@ -9,7 +9,7 @@ const Search = () => {
   const router = useRouter();
 
   return (
-    <div className="py-2 flex items-center justify-between px-4 w-96 border bg-white rounded-lg shadow-xl">
+    <div className="py-2 flex items-center justify-between px-4 w-96 border bg-white rounded-lg shadow-xl text-gray-700">
       <input
         className="w-full focus:outline-none h-full"
         type="text"
