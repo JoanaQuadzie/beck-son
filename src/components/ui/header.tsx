@@ -35,9 +35,9 @@ export default function Header() {
             ))}
           </ul>
 
-        <div>
-          <Search />
-        </div>
+          <div>
+            <Search />
+          </div>
 
           <div className="flex items-center mr-24">
             <ul className="flex gap-5 text-base mr-10">
@@ -70,12 +70,13 @@ export default function Header() {
             ))}
           </ul>
 
-        {/* <div className="ml-96">
+          {/* <div className="ml-96">
             <Link href="/login">
               <h2 className= font-semibold">Logout</h2>
             </Link>
           </div> */}
-      </nav>
-    </header>
+        </nav>
+      </header>
+    </div>
   );
 }
