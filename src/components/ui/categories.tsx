@@ -128,7 +128,10 @@ export default function Categories() {
       </div>
       <div className="grid grid-cols-4 w-full">
         {IMAGES.map((photo, i) => (
-          <div key={i} className="flex flex-col items-center">
+          <div
+            key={i}
+            className="flex flex-col items-center transform transition-transform duration-700 ease-in-out hover:scale-110"
+          >
             <Image
               src={photo.link}
               alt="kaftan"
