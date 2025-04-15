@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import React from "react";
 import { TiShoppingCart } from "react-icons/ti";
@@ -24,53 +23,60 @@ const NAVLINKSANNEX = [
 
 export default function Header() {
   return (
-    <header className="w-full">
-      <div className="flex w-full justify-between items-center p-4 bg-green-700 ">
-        <ul className="hidden md:flex gap-5 text-white">
-          {NAVLINKS.map(({ title, link }, i) => (
-            <li key={i}>
-              <Link href={link}>{title}</Link>
-            </li>
-          ))}
-        </ul>
+    <div>
+      <header className="pl-14 h-24 bg-green-700 text-white relative">
+        <nav className="flex absolute top-11 w-full justify-between items-center">
+          <ul className="hidden md:flex gap-5 text-base">
+            {" "}
+            {NAVLINKS.map(({ title, link }) => (
+              <li key={link}>
+                <Link href={link}>{title}</Link>
+              </li>
+            ))}
+          </ul>
 
-        <div>
-          <Search />
-        </div>
+          <div>
+            <Search />
+          </div>
 
-        <ul className="flex gap-5 items-center text-white">
-          <li>
-            <button className="flex items-center gap-2 hover:text-yellow-400">
-              <MdHelpOutline size={30} />
-              Help
-              <RiArrowDropDownLine size={30} />
-            </button>
-          </li>
-          <li>
-            <button className="flex items-center gap-2 hover:text-yellow-400">
-              <TiShoppingCart size={30} />
-              Cart
-            </button>
-          </li>
-        </ul>
-      </div>
+          <div className="flex items-center mr-24">
+            <ul className="flex gap-5 text-base mr-10">
+              <li>
+                <button className="flex items-center gap-2 hover:text-yellow-400">
+                  <MdHelpOutline size={30} />
+                  Help
+                  <RiArrowDropDownLine size={30} />
+                </button>
+              </li>
+              <li>
+                <button className="flex items-center gap-2 hover:text-yellow-400">
+                  <TiShoppingCart size={30} />
+                  Cart
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
 
-      <nav className="hidden md:flex p-3">
-        <ul className="flex gap-5">
-          {" "}
-          {NAVLINKSANNEX.map(({ title, link }, i) => (
-            <li key={i}>
-              <Link href={link}>{title}</Link>
-            </li>
-          ))}
-        </ul>
+      <header>
+        <nav className="flex py-3 ml-14">
+          <ul className="hidden md:flex gap-5 text-base ">
+            {" "}
+            {NAVLINKSANNEX.map(({ title, link }) => (
+              <li key={link}>
+                <Link href={link}>{title}</Link>
+              </li>
+            ))}
+          </ul>
 
-        {/* <div className="ml-96">
+          {/* <div className="ml-96">
             <Link href="/login">
               <h2 className= font-semibold">Logout</h2>
             </Link>
           </div> */}
-      </nav>
-    </header>
+        </nav>
+      </header>
+    </div>
   );
 }
