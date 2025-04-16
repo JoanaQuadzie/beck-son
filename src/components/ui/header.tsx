@@ -1,8 +1,9 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { TiShoppingCart } from "react-icons/ti";
 import { MdHelpOutline } from "react-icons/md";
-import { RiArrowDropDownLine } from "react-icons/ri";
+import { HiOutlineSearch } from "react-icons/hi";
 import Search from "./search";
 
 const NAVLINKS = [
@@ -13,19 +14,21 @@ const NAVLINKS = [
   { title: "Visit Us", link: "/contact" },
 ];
 
-// const NAVLINKSANNEX = [
-//   { title: "New In", link: "/new in" },
-//   { title: "African Designs", link: "/african designs" },
-//   { title: "Corporate", link: "/corporate" },
-//   { title: "Casuals", link: "/casuals" },
-//   { title: "More", link: "/more" },
-// ];
-
 export default function Header() {
+  const [showSearch, setShowSearch] = useState(false);
+
+  const toggleSearch = () => {
+    setShowSearch((prev) => !prev);
+  };
+
+  const handleSearchComplete = () => {
+    setShowSearch(false);
+  };
+
   return (
     <div>
       <header className="pl-14 h-24 text-black relative">
-        <nav className="flex absolute top-9 w-full justify-between items-center">
+        <nav className="flex absolute top-11 w-full justify-between items-center">
           <ul className="hidden md:flex gap-5 text-gray-700">
             {" "}
             {NAVLINKS.map(({ title, link }) => (
@@ -35,21 +38,32 @@ export default function Header() {
             ))}
           </ul>
 
-          <div className="text-gray-700">
+          {/* Conditionally rendered Search component */}
+          <div className="text-gray-700">{showSearch && <Search />}</div>
+
+          {/* <div className="text-gray-700">
             <Search />
-          </div>
+          </div> */}
 
           <div className="flex items-center mr-24">
             <ul className="flex gap-5 text-gray-600 mr-10">
               <li>
-                <button className="flex items-center gap-2 hover:text-yellow-400">
-                  <MdHelpOutline size={30} />
-                  Help
-                  <RiArrowDropDownLine size={30} />
+                <button
+                  className="flex items-center gap-2 hover:text-gray-400"
+                  onClick={toggleSearch}
+                >
+                  <HiOutlineSearch size={30} />
+                  Search
                 </button>
               </li>
               <li>
-                <button className="flex items-center gap-2 hover:text-yellow-400">
+                <button className="flex items-center gap-2 hover:text-gray-400">
+                  <MdHelpOutline size={30} />
+                  Help
+                </button>
+              </li>
+              <li>
+                <button className="flex items-center gap-2 hover:text-gray-400">
                   <TiShoppingCart size={30} />
                   Cart
                 </button>
@@ -58,19 +72,6 @@ export default function Header() {
           </div>
         </nav>
       </header>
-
-      {/* <header>
-        <nav className="flex py-3 ml-14">
-          <ul className="hidden md:flex gap-5 text-base ">
-            {" "}
-            {NAVLINKSANNEX.map(({ title, link }) => (
-              <li key={link}>
-                <Link href={link}>{title}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header> */}
     </div>
   );
 }

@@ -159,9 +159,12 @@ export default function Categories() {
         <h3 className="text-5xl font-serif capitalize text-gray-500 mt-24 mb-10 ml-14 text-center">
           Suits
         </h3>
-        <div className="w-full grid grid-cols-4">
+        <div className="w-full grid grid-cols-4 ">
           {SUITS.map((suit, i) => (
-            <div key={i} className="flex flex-col items-center">
+            <div
+              key={i}
+              className="flex flex-col items-center transform transition-transform duration-700 ease-in-out hover:scale-110"
+            >
               <Image
                 src={suit.link}
                 alt="sneakers"
@@ -192,7 +195,10 @@ export default function Categories() {
         </h3>
         <div className="grid grid-cols-4 w-full ">
           {SHIRTS.map((photo, i) => (
-            <div key={i} className="flex flex-col items-center">
+            <div
+              key={i}
+              className="flex flex-col items-center transform transition-transform duration-700 ease-in-out hover:scale-110"
+            >
               <Image
                 src={photo.link}
                 alt="kaftan"
@@ -221,9 +227,12 @@ export default function Categories() {
         <h3 className="text-5xl font-serif capitalize text-gray-500 mt-24 mb-10 ml-14 text-center">
           Sneakers & Shoes
         </h3>
-        <div className="w-full grid grid-cols-4">
+        <div className="w-full grid grid-cols-4 ">
           {ACCESSORIES.map((shoes, i) => (
-            <div key={i} className="flex flex-col items-center">
+            <div
+              key={i}
+              className="flex flex-col items-center transform transition-transform duration-700 ease-in-out hover:scale-110"
+            >
               <Image
                 src={shoes.link}
                 alt="sneakers"
