@@ -20,15 +20,9 @@ const IMAGES = [
     price: "GHS 600",
     status: "sold",
   },
-  {
-    link: "/images/bck46.jpg",
-    description: "Gray minimalist styled kaftan",
-    price: "GHS 600",
-    status: "sold",
-  },
 ];
 
-export default async function page(props) {
+export default async function page(props: { searchParams: any }) {
   const searchParams = await props.searchParams;
   const searchKeyword = searchParams.q;
   let searchedShirts;
@@ -46,21 +40,29 @@ export default async function page(props) {
   }
   return (
     <section>
-      <div>
-        <h2 className="text-center text-4xl font-semibold my-12">
-          DESIGN SHIRTS
-        </h2>
-      </div>
+      <h2 className="text-center text-4xl font-semibold my-12">
+        DESIGN SHIRTS
+      </h2>
+
       <div className="flex justify-center">
         <div className="grid grid-cols-3 gap-12 w-9/12 rounded-full ">
           {searchedShirts.length === 0 && <p>No shirts found</p>}
           {searchedShirts.map((photo, index) => (
             <div key={index}>
-              <Image src={photo.link} alt="shirt" width={2} height={2} />
+              <Image
+                src={photo.link}
+                alt="shirt"
+                width={200}
+                height={200}
+                className="h-auto w-auto"
+              />
               <div className="items-center justify-center flex flex-col my-6 italic text-gray-500">
                 <p>{photo.description}</p>
                 <p>{photo.price}</p>
                 <p>{photo.status}</p>
+                <button className="text-white italic bg-yellow-800 hover:bg-yellow-700 px-3 py-1 border rounded-lg">
+                  Add to cart
+                </button>
               </div>
             </div>
           ))}

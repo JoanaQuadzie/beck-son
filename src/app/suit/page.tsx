@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 const IMAGES = [
   {
@@ -10,25 +9,25 @@ const IMAGES = [
     status: "sold",
   },
   {
-    link: "/images/suit13.jpg",
+    link: "/images/suit14.jpg",
     description: "Gray minimalist styled kaftan",
     price: "GHS 600",
     status: "sold",
   },
   {
-    link: "/images/suit13.jpg",
+    link: "/images/suit15.jpg",
     description: "Gray minimalist styled kaftan",
     price: "GHS 600",
     status: "sold",
   },
   {
-    link: "/images/suit13.jpg",
+    link: "/images/suit12.jpg",
     description: "Gray minimalist styled kaftan",
     price: "GHS 600",
     status: "sold",
   },
   {
-    link: "/images/suit13.jpg",
+    link: "/images/suit11.jpg",
     description: "Gray minimalist styled kaftan",
     price: "GHS 600",
     status: "sold",
@@ -38,9 +37,8 @@ const IMAGES = [
 export default function page() {
   return (
     <section>
-      <div>
-        <h2 className="text-center text-4xl font-semibold my-12">SUITS</h2>
-      </div>
+      <h2 className="text-center text-4xl font-semibold my-12">SUITS</h2>
+
       <div className="flex justify-center">
         <div className="grid grid-cols-3 gap-12 w-9/12 rounded-full ">
           {IMAGES.map((photo) => (
@@ -50,6 +48,9 @@ export default function page() {
                 <p>{photo.description}</p>
                 <p>{photo.price}</p>
                 <p>{photo.status}</p>
+                <button className="text-white italic bg-yellow-800 hover:bg-yellow-700 px-2 py-1 border rounded-lg">
+                  Add to cart
+                </button>
               </div>
             </div>
           ))}

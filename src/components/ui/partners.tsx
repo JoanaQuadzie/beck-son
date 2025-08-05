@@ -1,6 +1,33 @@
 import React from "react";
 import Image from "next/image";
 
+const IMAGES = [
+  {
+    src: "/images/bck24.jpg",
+    alt: "Partner 1",
+  },
+  {
+    src: "/images/bck22.jpg",
+    alt: "Partner 2",
+  },
+  {
+    src: "/images/bck23.jpg",
+    alt: "Partner 3",
+  },
+  {
+    src: "/images/bck25.jpg",
+    alt: "Partner 4",
+  },
+  {
+    src: "/images/bck26.jpg",
+    alt: "Partner 5",
+  },
+  {
+    src: "/images/bck27.jpg",
+    alt: "Partner 6",
+  },
+];
+
 export default function Partners() {
   return (
     <div>
@@ -13,6 +40,7 @@ export default function Partners() {
         and shared success worldwide.
       </p>
       <div className="grid grid-cols-3 w-2/3 items-center ml-60">
+        <div></div>
         <Image
           src="/images/bck24.jpg"
           alt="hero image"
@@ -20,47 +48,6 @@ export default function Partners() {
           height={200}
           className="w-auto h-auto"
         />
-        <Image
-          src="/images/bck22.jpg"
-          alt="hero image"
-          width={200}
-          height={200}
-          className="w-auto h-auto"
-        />
-        <Image
-          src="/images/bck23.jpg"
-          alt="hero image"
-          width={20}
-          height={10}
-        />
-        <Image
-          src="/images/bck25.jpg"
-          alt="hero image"
-          width={200}
-          height={200}
-          className="w-auto h-auto"
-        />
-        <Image
-          src="/images/bck26.jpg"
-          alt="hero image"
-          width={200}
-          height={200}
-          className="w-auto h-auto"
-        />
-        <Image
-          src="/images/bck27.jpg"
-          alt="hero image"
-          width={200}
-          height={200}
-          className="w-auto h-auto"
-        />
-        {/* <Image
-          src="/images/bck28.jpg"
-          alt="hero image"
-           width={200}
-                height={200}
-                className="w-auto h-auto"
-        /> */}
       </div>
     </div>
   );
